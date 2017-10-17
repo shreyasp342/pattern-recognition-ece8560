@@ -6,7 +6,6 @@ The first 5000 samples in training data H (train_sp2017_v19) correspond to class
 
 the true class sequence of ST (test_sp2017_v19) is 3-1-2-3-2-1, which repeats throughout ST.
 
-
 ## Takehome 3
 ### Support Vector Machines (SVM)
 We are asked to use the first two classes of the training set to train the SVM model and then discriminate between the first two classes in the test set.

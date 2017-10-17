@@ -71,4 +71,15 @@ The Confusion Matrix is
 
 Error was found to be **17.63%**
 
+#### Comparison and Analysis of classifiers
+P(error)
+
+| Classifier 						 | P(error) (%) |
+| ---------------------------------- | ------------:|
+| Bayesian Classifier                | 94.0% 		|
+| Ho-Kashyap Hyperplane Classifier   | 18.96% 		|
+| 1-NNR                              | 13.25% 		|
+| 3-NNR							     | 11.38% 		|
+| 5-NNR							     | 10.55% 		|
+| Principle Component Analysis (PCA) | 17.63% 		|
 
