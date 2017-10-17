@@ -97,29 +97,27 @@ The implementation of Linear Kernel SVM using **LIBSVM**
 <li> Scale the training data and reduce the range to [0,1] using min-max formulation.</li>
 <li> Find the penalty parameter, C using k-fold cross-validation and grid search.</br>
 	I used k=5 for cross validation, and for grid search. In grid search, C is searched in the exponential search space, to cover a wider area. To fine tune the calculation of C, I implemented grid search in 3 stages. <br>
-	C is calculated as `C = 2^p`<br><span style="background-color: #FFFF00">draw attention</span>
+	C is calculated as <b>C = 2^p</b><br>
 	I used p in the range [-10, 20] with increment steps of 2. After getting a coarse-value C1 at corresponding p1, I ran for p in the range[p1-2, p1+2] with increment steps of 0.5, to find C2 and p2. Finally, I ran for C in the range [p2-0.5, p2+0.5] with step increments of 0.1. This helps get finely tuned value for C using grid-search with reduced computation time. <br>
 	For the given training set, <b>C</b> is found to be <b>9.2681x104</b> and <b>p</b> is <b>16.5</b>.</li>
-3. Train the SVM and generate the model parameters using the MATLAB function,
-...`model = svmtrain(label,trainingdata,expression);`
-......where trainingdata – mXn matrix with m vectors and each vector has n features
-......label – mX1 matrx where each rows is the label (class) of the corresponding vector in training set.
-......Expression – LIBSVM parameter option string. We use ‘-t 0 -c 9.2681x104 ‘
-4. Test SVM on the testing data and check the accuracy of the model using the MATLAB function,
-...`[predictedlabel, accuracy, decision_values] = svmpredict(testinglabel, testingdata, model);`
-......where testingdata – mXn matrix with m vectors and each vector has n features
-......label – mX1 matrx where each row is the label (class) of the corresponding vector in testing set. This is used for finding the accuracy.
-......Model – output from previous step
-......Predictedlabel – the predicted class for each row in testingdata
-......Accuracy – accuracy of the system
-5. Hyperplane parameter is calculated using
-
-... `w = wc * SV`
-
-... ... Where wc – nX1 coefficient vector (model.sv_coef')
-
-... ... SV – mXn support vectors (model.SVs)
+<li> Train the SVM and generate the model parameters using the MATLAB function,<br>
+	 <b><em>model = svmtrain(label,trainingdata,expression);</em></b><br>
+		where trainingdata – mXn matrix with m vectors and each vector has n features<br>
+		label – mX1 matrx where each rows is the label (class) of the corresponding vector in training set.<br>
+		Expression – LIBSVM parameter option string. We use <b>-t 0 -c 9.2681x104 </b></li>
+<li> Test SVM on the testing data and check the accuracy of the model using the MATLAB function,<br>
+	 <b><em>[predictedlabel, accuracy, decision_values] = svmpredict(testinglabel, testingdata, model);</em></b><br>
+		where testingdata – mXn matrix with m vectors and each vector has n features.<br>
+		label – mX1 matrx where each row is the label (class) of the corresponding vector in testing set. This is used for finding the accuracy.<br>
+		Model – output from previous step.<br>
+		Predictedlabel – the predicted class for each row in testingdata<br>
+		Accuracy – accuracy of the system</li>
+<li> Hyperplane parameter is calculated using<br>
+	 <b><em>w = wc * SV</em></b><br>
+		Where wc – nX1 coefficient vector (<b>model.sv_coef'</b>)<br>
+		SV – mXn support vectors (<b>model.SVs</b>)</li>
 </ol>
+</p>
 
 For the given data with **C = 9.2681x(10^4)**, we got **4520** support vectors.
 
