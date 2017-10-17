@@ -111,10 +111,14 @@ C is calculated as `C = 2^p`
 ......Predictedlabel – the predicted class for each row in testingdata
 ......Accuracy – accuracy of the system
 5. Hyperplane parameter is calculated using
+
 ...`w = wc * SV`
+
 ......Where wc – nX1 coefficient vector (model.sv_coef')
+
 ......SV – mXn support vectors (model.SVs)
 
 For the given data with **C = 9.2681x(10^4)**, we got **4520** support vectors.
+
 The accuracy was found to be **81.49%**
 
