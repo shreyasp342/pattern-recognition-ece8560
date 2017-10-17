@@ -91,13 +91,13 @@ We are asked to use the first two classes of the training set to train the SVM m
 I used a software package called **LIBSVM** for the implementation of SVM.
 
 #### Linear Kernel
-The implementation of Linear Kernel SVM using LIBSVM**
+The implementation of Linear Kernel SVM using **LIBSVM**
 <p>
 <ol>
 <li> Scale the training data and reduce the range to [0,1] using min-max formulation.</li>
 <li> Find the penalty parameter, C using k-fold cross-validation and grid search.</br>
 	I used k=5 for cross validation, and for grid search. In grid search, C is searched in the exponential search space, to cover a wider area. To fine tune the calculation of C, I implemented grid search in 3 stages. <br>
-	C is calculated as `C = 2^p`<br>
+	C is calculated as `C = 2^p`<br><span style="background-color: #FFFF00">draw attention</span>
 	I used p in the range [-10, 20] with increment steps of 2. After getting a coarse-value C1 at corresponding p1, I ran for p in the range[p1-2, p1+2] with increment steps of 0.5, to find C2 and p2. Finally, I ran for C in the range [p2-0.5, p2+0.5] with step increments of 0.1. This helps get finely tuned value for C using grid-search with reduced computation time. <br>
 	For the given training set, <b>C</b> is found to be <b>9.2681x104</b> and <b>p</b> is <b>16.5</b>.</li>
 3. Train the SVM and generate the model parameters using the MATLAB function,
