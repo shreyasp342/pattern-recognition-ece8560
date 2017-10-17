@@ -93,11 +93,12 @@ I used a software package called **LIBSVM** for the implementation of SVM.
 #### Linear Kernel
 The implementation of Linear Kernel SVM using LIBSVM**
 <p>
-<ol> Scale the training data and reduce the range to [0,1] using min-max formulation.</ol>
-<ol> Find the penalty parameter, C using k-fold cross-validation and grid search.</br>
+<ol>
+<li> Scale the training data and reduce the range to [0,1] using min-max formulation.</li>
+<li> Find the penalty parameter, C using k-fold cross-validation and grid search.</br>
 	I used k=5 for cross validation, and for grid search. In grid search, C is seach in the exponential search space, to cover a wider area. To fine tune the calculation of C, I implemented grid search in 3 stages
 C is calculated as `C = 2^p`<br>
-	I used p in the range [-10, 20] with increment steps of 2. After getting a coarse-value C1 at corresponding p1, I ran for p in the range[p1-2, p1+2] with increment steps of 0.5, to find C2 and p2. Finally, I ran for C in the range [p2-0.5, p2+0.5] with step increments of 0.1. This helps get finely tuned value for C using grid-search with reduced computation time. For the given training set, C is found to be 9.2681x104 and p is 16.5.</ol>
+	I used p in the range [-10, 20] with increment steps of 2. After getting a coarse-value C1 at corresponding p1, I ran for p in the range[p1-2, p1+2] with increment steps of 0.5, to find C2 and p2. Finally, I ran for C in the range [p2-0.5, p2+0.5] with step increments of 0.1. This helps get finely tuned value for C using grid-search with reduced computation time. For the given training set, C is found to be 9.2681x104 and p is 16.5.</li>
 3. Train the SVM and generate the model parameters using the MATLAB function,
 ...`model = svmtrain(label,trainingdata,expression);`
 ......where trainingdata – mXn matrix with m vectors and each vector has n features
@@ -117,6 +118,7 @@ C is calculated as `C = 2^p`<br>
 ... ... Where wc – nX1 coefficient vector (model.sv_coef')
 
 ... ... SV – mXn support vectors (model.SVs)
+</ol>
 
 For the given data with **C = 9.2681x(10^4)**, we got **4520** support vectors.
 
