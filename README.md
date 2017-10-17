@@ -102,20 +102,23 @@ The implementation of Linear Kernel SVM using **LIBSVM**
 	For the given training set, <b>C</b> is found to be <b>9.2681x104</b> and <b>p</b> is <b>16.5</b>.</li>
 <li> Train the SVM and generate the model parameters using the MATLAB function,<br>
 	 <b><em>model = svmtrain(label,trainingdata,expression);</em></b><br>
-		where trainingdata – mXn matrix with m vectors and each vector has n features<br>
-		     <ol> label – mX1 matrx where each rows is the label (class) of the corresponding vector in training set.<br>
-		      expression – LIBSVM parameter option string. We use <b>-t 0 -c 9.2681x104 </b></ol></li>
+		where,
+			<ol>trainingdata – mXn matrix with m vectors and each vector has n features</ol>
+		    <ol> label – mX1 matrx where each rows is the label (class) of the corresponding vector in training set.</ol>
+		    <ol>expression – LIBSVM parameter option string. We use <b>-t 0 -c 9.2681x104 </b></ol></li>
 <li> Test SVM on the testing data and check the accuracy of the model using the MATLAB function,<br>
 	 <b><em>[predictedlabel, accuracy, decision_values] = svmpredict(testinglabel, testingdata, model);</em></b><br>
-		where testingdata – mXn matrix with m vectors and each vector has n features.<br>
-		      label – mX1 matrx where each row is the label (class) of the corresponding vector in testing set. This is used for finding the accuracy.<br>
-		      model – output from previous step.<br>
-		      predictedlabel – the predicted class for each row in testingdata<br>
-		      accuracy – accuracy of the system</li>
+		where,
+			<ol>testingdata – mXn matrix with m vectors and each vector has n features.<br>
+		    <ol>label – mX1 matrx where each row is the label (class) of the corresponding vector in testing set. This is used for finding the accuracy.</ol>
+		    <ol>model – output from previous step.</ol>
+		    <ol>predictedlabel – the predicted class for each row in testingdata</ol>
+		    <ol>accuracy – accuracy of the system</ol></li>
 <li> Hyperplane parameter is calculated using<br>
 	 <b><em>w = wc * SV</em></b><br>
-		Where wc – nX1 coefficient vector (<b>model.sv_coef'</b>)<br>
-		      SV – mXn support vectors (<b>model.SVs</b>)</li>
+		where,
+			<ol>wc – nX1 coefficient vector (<b>model.sv_coef'</b>)</ol>
+		    <ol>SV – mXn support vectors (<b>model.SVs</b>)</ol></li>
 </ol>
 </p>
 
