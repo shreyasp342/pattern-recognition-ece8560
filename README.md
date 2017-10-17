@@ -103,8 +103,8 @@ The implementation of Linear Kernel SVM using **LIBSVM**
 <li> Train the SVM and generate the model parameters using the MATLAB function,<br>
 	 <b><em>model = svmtrain(label,trainingdata,expression);</em></b><br>
 		where trainingdata – mXn matrix with m vectors and each vector has n features<br>
-		      label – mX1 matrx where each rows is the label (class) of the corresponding vector in training set.<br>
-		      expression – LIBSVM parameter option string. We use <b>-t 0 -c 9.2681x104 </b></li>
+		     <ol> label – mX1 matrx where each rows is the label (class) of the corresponding vector in training set.<br>
+		      expression – LIBSVM parameter option string. We use <b>-t 0 -c 9.2681x104 </b><ol></li>
 <li> Test SVM on the testing data and check the accuracy of the model using the MATLAB function,<br>
 	 <b><em>[predictedlabel, accuracy, decision_values] = svmpredict(testinglabel, testingdata, model);</em></b><br>
 		where testingdata – mXn matrix with m vectors and each vector has n features.<br>
