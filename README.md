@@ -85,7 +85,7 @@ Error was found to be **17.63%**
 
 
 ## Takehome 3
-###Support Vector Machines (SVM)
+### Support Vector Machines (SVM)
 We are asked to use the first two classes of the training set to train the SVM model and then discriminate between the first two classes in the test set.
 
 I used a software package called **LIBSVM** for the implementation of SVM.
