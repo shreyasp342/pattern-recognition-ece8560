@@ -105,7 +105,7 @@ The implementation of Linear Kernel SVM using **LIBSVM**
 		where,
 			<ol><em>trainingdata</em> – mXn matrix with m vectors and each vector has n features.</ol>
 		    <ol><em>label</em> – mX1 matrx where each rows is the label (class) of the corresponding vector in training set.</ol>
-		    <ol><em>expression</em> – LIBSVM parameter option string. We use <b>-t 0 -c 9.2681x104 </b>.</ol></li>
+		    <ol><em>expression</em> – LIBSVM parameter option string. We use <b>-t 0 -c 9.2681x10^4 </b>.</ol></li>
 <li> Test SVM on the testing data and check the accuracy of the model using the MATLAB function,<br>
 	 <b><em>[predictedlabel, accuracy, decision_values] = svmpredict(testinglabel, testingdata, model);</em></b><br>
 		where,
@@ -167,7 +167,7 @@ The accuracy was found to be **90.86%**
 Find the c-means cluster for c = 2,3,4,5.
 
 <p>
-Crisp c-means Algorithm
+Crisp c-means Algorithm - 
 <ol>
 	<li> Choose the number of clusters <em>c</em>. Here c = 2,3,4,5.</li>
 	<li> Choose m1, m2, ..., mc initial guesses of centroid.</li>
@@ -177,6 +177,7 @@ Crisp c-means Algorithm
 	<li> Else, go to step 3.</li>
 </ol>
 <br>
+I used <b><em>Vector Partitioning</em></b> to find the initial guesses of the centroid - 
 <ol>
 	<li> Find mean <em>m</em> and variance <em>V</em> of the data set.</li>
 	<li> Calculate the eigen values of the variance <em>V</em>.</li>
@@ -198,7 +199,7 @@ The 2 distance measures that I have used are:
 
 The number of data points in cluster are --
 
-Euclidean Distance
+Euclidean Distance:
 
 |        | c = 2 | c = 3 | c = 4 | c = 5 |
 | -------|:-----:|:-----:|:-----:|:-----:|
@@ -208,7 +209,7 @@ Euclidean Distance
 | **c4** | NA    | NA    | 2672  | 2365  |
 | **c5** | NA    | NA    | NA    | 6187  |
 	
-Cityblock Distance
+Cityblock Distance:
 
 |        | c = 2 | c = 3 | c = 4 | c = 5 |
 | -------|:-----:|:-----:|:-----:|:-----:|
@@ -237,7 +238,6 @@ The mean values of the classes w1, w2 and w3 of the training set are
 | **c3** | 49.7022 | 5.4015   | 24.5501  | -49.9373 |
 
 The means of cmeans for c = 3 and means of classes w1, w2, w3 are somewhat comparable.
-
 c1, c2, and c3 are close to w3, w2, and w1 respectively.
 
 	
