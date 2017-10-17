@@ -13,11 +13,11 @@ Error was found to be **9.40%**
 
 The Confusion Matrix is
 
-| N = 15000       | class 1 (predicted)  | class 2 (predicted)  | class 3 (predicted)  |
-| --------------- |:--------------------:|:--------------------:|:--------------------:|
-| class 1 (true)  | 4218                 | 547                  | 235                  |
-| class 2 (true)  | 395                  | 4568                 | 37                   |
-| class 3 (true)  | 148                  | 48                   | 4804                 | 
+| N = 15000           | class 1 (predicted)  | class 2 (predicted)  | class 3 (predicted)  |
+| ------------------- |:--------------------:|:--------------------:|:--------------------:|
+| **class 1 (true)**  | 4218                 | 547                  | 235                  |
+| **class 2 (true)**  | 395                  | 4568                 | 37                   |
+| **class 3 (true)**  | 148                  | 48                   | 4804                 | 
 
 | Tables        | Are           | Cool  |
 | ------------- |:-------------:| -----:|
