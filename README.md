@@ -18,6 +18,13 @@ The Confusion Matrix is
 | class 2 (true)  | 395 | 4568 | 37 |
 | class 3 (true)  | 148 | 48 | 4804 | 
 
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
+
 ## Takehome 2
 
 ## Takehome 3
